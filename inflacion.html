@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Argentina</title>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<body>
+    <ToastContainer theme="dark" />
+    <div class="contenedor-nav">
+        <a href="index.html"><h2>Calculadora Argentina</h2></a>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="impuestos.html">Calcular Impuestos</a></li>
+                <li><a href="conversor.html">Conversor de Moneda</a></li>
+            </ul>
+        </nav>        
+    </div>
+    <div class="marquee-container">
+        <div class="marquee">
+            - - DÓLAR BLUE: $272,00 / $276,00  - -  RIESGO PAÍS: 2.374puntos VAR%: -2,26%  - -  17.4º CAPITAL FEDERAL - -
+        </div>
+    </div>
+
+    <main>
+        <fieldset class="calcular-impuestos" id="fieldset">            
+            <legend>Calcular Inflación</legend>
+            <div class="div-inflacion">
+                <label for="valor1"></label>
+                <input type="number" min="1" placeholder="$" id="valor1" class="inputs ">
+                
+                <label for="fecha1_mes">EN</label>
+                <select id="fecha1_mes" class="impuestos inputs">
+                    <option disabled selected>-Seleccionar-</option>
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                
+                <label for="fecha1_year">DEL</label> 
+                <select id="fecha1_year" class="impuestos inputs">
+                    <option disabled selected>-Seleccionar-</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>   
+                </select>
+            
+            </div>
+            <p>Es aproximadamente equivalente a</p>
+            <div class="div-inflacion">
+                <label for="valor2"></label>
+                <input disabled type="number" min="1" id="valor2" class="resultadoInfla">
+                <label for="fecha2_mes">EN</label>
+                <select id="fecha2_mes" class="impuestos inputs">
+                    <option disabled selected>-Seleccionar-</option>
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                
+                <label for="fecha2_year">DEL</label> 
+                <select id="fecha2_year" class="impuestos inputs">
+                    <option disabled selected>-Seleccionar-</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>  
+                </select>
+            </div>
+            <button disabled class="btn" type="submit" id="calcularInflacion">CALCULAR</button>
+        </fieldset>             
+    </main>
+
+    <footer id="futer">        
+        <p> Copyright 2022 © | Calculadora Argentina | Todos los derechos reservados</p>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> 
+    <script type="text/javascript" src="js/marquee.js"></script>
+    <script type="text/javascript" src="js/inflaciondata.js"></script>
+    <script type="text/javascript" src="js/inflacion.js"></script>
+</body>
+</html>

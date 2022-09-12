@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Argentina</title>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body> 
+    <div class="contenedor-nav">
+        <a href="index.html"><h2>Calculadora Argentina</h2></a>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inflacion.html">Calcular Inflación</a></li>
+                <li><a href="conversor.html">Conversor de Moneda</a></li>
+            </ul>
+        </nav>        
+    </div>
+    <div class="marquee-container">
+        <div class="marquee">
+            - - DÓLAR BLUE: $272,00 / $276,00  - -  RIESGO PAÍS: 2.374puntos VAR%: -2,26%  - -  17.4º CAPITAL FEDERAL - -
+        </div>
+    </div>
+
+    <main>
+        <fieldset class="calcular-impuestos">
+            <legend>Calcular impuesto</legend>
+            <label for="precio">Pesos:</label>
+            <input type="number" min="1" placeholder="$" id="precio" class="inputs">
+            
+            <label for="impuestos">sumarle</label>
+            <select id="impuestos" class="impuestos inputs" >      </select>                
+            <button disabled class="btn" type="submit" id="calcular">CALCULAR</button>
+        </fieldset>
+
+            <div class="div_resultados">
+                <div class="contenedor_tabla" id="resultados">
+                    <table id="tabla_resultados"  class="tabla_resultados hidden">
+                        <tbody>
+                            <tr>
+                            <th>Precio Inicial</th>
+                            <th id="importe"></th>
+                            <th>Precio Final</th>
+                            </tr>
+                            <tr>
+                            <td id="resultado_inicial"></td>
+                            <td id="resultado_importe"></td>
+                            <td id="resultado_final"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+                <button class="btn" type="submit" id="mostrarHistorial">HISTORIAL</button>
+                <div class="contenedor_tabla" id="historial">
+                    <table id="tabla_historial"  class="tabla_resultados hidden">
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             
+    </main>
+
+    <footer id="futer">        
+        <p> Copyright 2022 © | Calculadora Argentina | Todos los derechos reservados</p>
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/index.js"></script>  
+</body>
+</html>
